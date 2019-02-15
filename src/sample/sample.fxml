@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="705.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+       <MenuBar BorderPane.alignment="CENTER">
+           <Menu mnemonicParsing="false" text="File">
+               <MenuItem mnemonicParsing="false" text="Close" />
+           </Menu>
+           <Menu mnemonicParsing="false" text="Edit">
+               <MenuItem mnemonicParsing="false" text="Delete" />
+           </Menu>
+           <Menu mnemonicParsing="false" text="Help">
+               <MenuItem mnemonicParsing="false" onAction="#aboutProgram" text="О программе" />
+           </Menu>
+       </MenuBar>
+   </top>
+   <bottom>
+      <HBox prefHeight="52.0" prefWidth="600.0" spacing="5.0" BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <Label text="Имя" />
+            <TextField fx:id="nameField"/>
+            <Label text="Возраст" />
+            <TextField fx:id="ageField" prefHeight="31.0" prefWidth="65.0" />
+            <Label text="Зарплата" />
+            <TextField fx:id="salaryField" prefHeight="31.0" prefWidth="86.0" />
+            <Button mnemonicParsing="false" onAction="#insertToDB" text="Добавить" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></HBox>
+   </bottom>
+</BorderPane>
